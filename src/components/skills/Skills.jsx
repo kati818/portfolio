@@ -11,6 +11,7 @@ export default function Skills({ heading, icons }) {
       <div>
         <h2 className="skills-heading">{heading}</h2>
       </div>
+
       <ul className="tools-icons">
         {icons.map((icon, index) => (
           <Icon key={index} src={icon.src} alt={icon.alt} />

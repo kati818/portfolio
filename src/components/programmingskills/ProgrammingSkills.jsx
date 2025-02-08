@@ -13,6 +13,7 @@ import mySqlIcon from "../../assets/img/mysql-iconsvg.svg";
 import netlify from "../../assets/img/netlify-icon.svg";
 import postmanIcon from "../../assets/img/postman-icon.svg";
 import vsCodeIcon from "../../assets/img/vscode.svg";
+import AnimatedText from "../animatedtext/AnimatedText";
 
 export default function ProgrammingSkills() {
   const backendIcons = [
@@ -42,12 +43,15 @@ export default function ProgrammingSkills() {
       <section className="skills" id="Skills">
         <div className="skills-text-container">
           <h2 className="skills-heading">Hard skills</h2>
-          <p className="programming-skills-text">
-            I have been studying web development for several years, starting my
-            programming journey with a strong emphasis on backend development.
-            Following that, I expanded my expertise to front-end technologies
-            with the goal of becoming a proficient full-stack developer.
-          </p>
+          <AnimatedText className="programming-skills-text">
+            <p>
+              I have been studying web development for several years, starting
+              my programming journey with a strong emphasis on backend
+              development. Following that, I expanded my expertise to front-end
+              technologies with the goal of becoming a proficient full-stack
+              developer.
+            </p>
+          </AnimatedText>
         </div>
         <div>
           <Skills heading="Backend" icons={backendIcons} className="backend" />
