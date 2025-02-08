@@ -1,0 +1,24 @@
+.projects {
+  background-color: #f2fbfa;
+  padding-bottom: 6rem;
+  padding-top: 4rem;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+}
+
+.projects-heading {
+  font-size: 80px;
+  text-transform: uppercase;
+  padding-bottom: 60px;
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+.card {
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-img {
+  background-image: url(/img/Omnifood-project.png);
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-color: #fff;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card:hover {
+  transition: opacity 0.3s ease, scale(1.1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.card-content {
+  text-align: center;
+}

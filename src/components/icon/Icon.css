@@ -1,0 +1,10 @@
+.icon {
+  width: 120px;
+  height: 120px;
+}
+
+.skills-icons {
+  display: flex;
+  gap: 2.5rem;
+  padding: 4rem;
+}

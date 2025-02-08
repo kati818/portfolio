@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+.top-container {
+  display: flex;
+  justify-content: center;
+  background-color: #81d8d0;
+  position: relative;
+  height: 65vh;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%); /* Start off-screen to the left */
+    opacity: 0; /* Optional: Start with 0 opacity for fade-in effect */
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* End with full opacity */
+  }
+}
+
+.intro {
+  display: inline-block; /* Ensure the element can be transformed */
+  animation: slideInLeft 2s ease forwards; /* 1s duration, ease for smooth effect */
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #303030;
+  text-transform: uppercase;
+}
+
+.intro-addition {
+  font-family: "Dancing Script";
+  font-size: 2.5rem;
+  color: #d88189;
+}

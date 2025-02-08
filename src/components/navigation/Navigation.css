@@ -1,0 +1,91 @@
+.header {
+  padding: 1.6rem 3.2rem;
+  background-color: #fff;
+  height: 6rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(242, 251, 250, 0.9);
+  z-index: 1000;
+  box-shadow: 0 1.2rem 3.2rem rgb(198, 198, 198);
+  padding: 2rem;
+}
+
+.main-nav-list {
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.main-nav-link {
+  position: relative; /* Make this element the reference point for the pseudo-element */
+  text-decoration: none;
+  color: #303030;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.main-nav-link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #81d8d0;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.main-nav-link:hover::before {
+  transform: scaleX(1); /* Expand the underline on hover */
+}
+
+.main-nav-link:hover {
+  color: #81d8d0; /* Optional: Change text color on hover */
+}
+
+.email-button {
+  background-color: #fff; /* Green background */
+  color: #303030; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.5s;
+}
+
+.sticky .email-button {
+  background-color: #f2fbfa;
+}
+
+.sticky .about {
+  margin-top: 6rem;
+}
+
+.email-button:hover {
+  background-color: #d88189;
+  color: #fff;
+  opacity: 1;
+}
+
+.mailto-link {
+  text-decoration: none;
+  color: #303030;
+}
+
+.mailto-link:hover {
+  color: #fff;
+}

@@ -1,0 +1,15 @@
+.tab-text {
+  display: flex;
+  align-items: stretch;
+  padding-right: 20rem;
+  padding-left: 20rem;
+  padding-bottom: 2rem;
+}
+
+.tabpanel-text {
+  transition: "height 0.3s ease-in-out";
+  font-size: 1.2rem;
+  line-height: 2rem;
+  min-height: 200px;
+  color: #303030;
+}

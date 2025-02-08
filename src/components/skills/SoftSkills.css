@@ -1,0 +1,33 @@
+.soft-skills {
+  padding-top: 60px;
+}
+
+.softskills-text-container {
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.softskills-heading {
+  font-size: 80px;
+  text-transform: uppercase;
+  padding-bottom: 60px;
+}
+
+.softskills-text {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  width: 70%;
+}
+
+.lang-soft-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 11rem 4rem 13rem;
+}
+
+.softskills {
+  display: flex;
+}
