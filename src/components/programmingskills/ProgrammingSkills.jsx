@@ -1,27 +1,40 @@
 import "../skills/Skills.css";
 import Skills from "../skills/Skills";
+import javaIcon from "../../assets/img/java-icon.svg";
+import npmIcon from "../../assets/img/npm-icon.svg";
+import nodeJsIcon from "../../assets/img/nodejs-icon.svg";
+import ejsIcon from "../../assets/img/ejs-icon.svg";
+import htmlIcon from "../../assets/img/html-icon.svg";
+import cssIcon from "../../assets/img/css-icon.svg";
+import jsIcon from "../../assets/img/js-icon.svg";
+import Reacticon from "../../assets/img/react-icon.svg";
+import gitIcon from "../../assets/img/github-icon.svg";
+import mySqlIcon from "../../assets/img/mysql-iconsvg.svg";
+import netlify from "../../assets/img/netlify-icon.svg";
+import postmanIcon from "../../assets/img/postman-icon.svg";
+import vsCodeIcon from "../../assets/img/vscode.svg";
 
 export default function ProgrammingSkills() {
   const backendIcons = [
-    { src: "img/java-icon.svg", alt: "Java icon" },
-    { src: "img/npm-icon.svg", alt: "NPM icon" },
-    { src: "img/nodejs-icon.svg", alt: "NodeJS icon" },
-    { src: "img/ejs-icon.svg", alt: "EJS icon" },
+    { src: javaIcon, alt: "Java icon" },
+    { src: npmIcon, alt: "NPM icon" },
+    { src: nodeJsIcon, alt: "NodeJS icon" },
+    { src: ejsIcon, alt: "EJS icon" },
   ];
 
   const frontendIcons = [
-    { src: "img/html-icon.svg", alt: "HTML icon" },
-    { src: "img/css-icon.svg", alt: "CSS icon" },
-    { src: "img/js-icon.svg", alt: "JavaScript icon" },
-    { src: "img/react-icon.svg", alt: "React icon" },
+    { src: htmlIcon, alt: "HTML icon" },
+    { src: cssIcon, alt: "CSS icon" },
+    { src: jsIcon, alt: "JavaScript icon" },
+    { src: Reacticon, alt: "React icon" },
   ];
 
   const toolIcons = [
-    { src: "img/github-icon.svg", alt: "github icon" },
-    { src: "img/mysql-iconsvg.svg", alt: "MySQL icon" },
-    { src: "img/netlify-icon.svg", alt: "Netlify icon" },
-    { src: "img/postman-icon.svg", alt: "Postman icon" },
-    { src: "img/vscode.svg", alt: "VSCode icon" },
+    { src: gitIcon, alt: "github icon" },
+    { src: mySqlIcon, alt: "MySQL icon" },
+    { src: netlify, alt: "Netlify icon" },
+    { src: postmanIcon, alt: "Postman icon" },
+    { src: vsCodeIcon, alt: "VSCode icon" },
   ];
 
   return (
