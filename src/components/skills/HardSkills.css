@@ -1,0 +1,21 @@
+.skills {
+  background-color: #f2fbfa;
+}
+
+.skills-section {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.tools-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.hard-skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}

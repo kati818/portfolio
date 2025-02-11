@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./About.css";
 import "./TabListStyles.css";
-import Tab from "@mui/material/Tab";
+import { Tab, Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { tabsClasses } from "@mui/material";
 import { TabContext, TabPanel, TabList } from "@mui/lab";
@@ -9,12 +9,24 @@ import AnimatedText from "../animatedtext/AnimatedText";
 
 const TabItem = styled(Tab)(({ theme }) => ({
   textTransform: "uppercase",
-  margin: theme.spacing(0, 2),
-  minWidth: 0,
+  margin: theme.spacing(0, 1),
+  minWidth: "auto",
   color: "#000",
   borderRadius: "8px",
+  fontSize: "1rem",
   [`&.${tabsClasses.selected}`]: {
     color: "#000",
+  },
+  [theme.breakpoints.down("md")]: {
+    fontSize: "0.7rem",
+    margin: theme.spacing(0, 0.5),
+    padding: "4px 6px",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.5rem",
+    margin: theme.spacing(0, 0.1),
+    padding: "3px 3px",
+    minWidth: "auto",
   },
 }));
 
@@ -27,12 +39,24 @@ export default function About() {
 
   return (
     <section className="about">
-      <h2 className="aboutme-heading">About me</h2>
+      <h2 className="section-heading">About me</h2>
       <AnimatedText className="greeting">
         {/* <LeftQuoteIcon /> */}
         <TabContext value={value}>
-          <div className="tab-text">
-            <TabPanel value="1" className="tabpanel-text">
+          <TabPanel
+            className="section-text"
+            value="1"
+            sx={(theme) => ({
+              padding: "0",
+              [theme.breakpoints.down("md")]: {
+                fontSize: "1rem",
+              },
+              [theme.breakpoints.down("sm")]: {
+                fontSize: "0.8rem",
+              },
+            })}
+          >
+            <p className="section-text">
               Hi, I'm Ekaterina, a passionate and creative web developer with a
               strong interest in front-end development and UI/UX design. My
               programming journey began with backend development, where I
@@ -40,8 +64,22 @@ export default function About() {
               solid foundation in programming principles and deepened my
               understanding of core concepts, making it easier to navigate
               various programming languages.
-            </TabPanel>
-            <TabPanel value="2" className="tabpanel-text">
+            </p>
+          </TabPanel>
+          <TabPanel
+            className="section-text"
+            value="2"
+            sx={(theme) => ({
+              padding: "0",
+              [theme.breakpoints.down("md")]: {
+                fontSize: "1rem",
+              },
+              [theme.breakpoints.down("sm")]: {
+                fontSize: "0.8rem",
+              },
+            })}
+          >
+            <p className="section-text">
               Some years ago, I graduated from the University of Helsinki, where
               I specialized in Translation and Interpreting. My background in
               languages has given me a unique perspective on communication,
@@ -50,27 +88,40 @@ export default function About() {
               bridge gaps, whether translating between languages or translating
               complex technical concepts into accessible, engaging web
               solutions.
-            </TabPanel>
-            <TabPanel value="3" className="tabpanel-text">
-              As I transition into front-end development, I’m excited to bring
+            </p>
+          </TabPanel>
+          <TabPanel
+            value="3"
+            sx={(theme) => ({
+              padding: "0",
+              [theme.breakpoints.down("md")]: {
+                fontSize: "1rem",
+              },
+              [theme.breakpoints.down("sm")]: {
+                fontSize: "0.8rem",
+              },
+            })}
+          >
+            <p className="section-text">
+              As I transition into front-end development, I'm excited to bring
               fresh ideas and a unique perspective to every project I work on.
               With a strong eagerness to learn and innovate, I strive to create
               visually appealing and user-friendly experiences that blend
               functionality with great design. In the future, I aim to expand my
               skill set to become a full-stack developer, integrating back-end
               technologies with front-end interfaces.
-            </TabPanel>
-          </div>
+            </p>
+          </TabPanel>
 
           {/* <RightQuoteIcon /> */}
           <TabList
             value={value}
             onChange={handleChange}
-            sx={{
-              width: "30%",
+            sx={(theme) => ({
+              width: "50%",
               borderRadius: "31px",
               background: "rgb(129, 216, 208)",
-              padding: "10px",
+              padding: "8px",
               boxShadow: "0px 3px 15px rgba(150, 151, 159, 0.5)",
               "& .MuiTab-root": {
                 color: "#303030",
@@ -86,7 +137,21 @@ export default function About() {
                 borderRadius: "31px",
                 backgroundColor: "rgba(255, 255, 255, .2)",
               },
-            }}
+              [theme.breakpoints.down("md")]: {
+                width: "50%", // Increase width on medium screens (≤960px)
+                padding: "5px",
+              },
+
+              [theme.breakpoints.down("sm")]: {
+                width: "80%", // Make it wider on small screens (≤600px)
+                padding: "3px",
+              },
+
+              [theme.breakpoints.down("xs")]: {
+                width: "90%", // Full width on extra small screens (≤400px)
+                padding: "3px",
+              },
+            })}
             centered
           >
             <TabItem label="Journey" value="1" />
