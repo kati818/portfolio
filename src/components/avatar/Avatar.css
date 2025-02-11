@@ -12,13 +12,6 @@
 }
 
 @media (max-width: 600px) {
-  /* .img {
-    bottom: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 160px;
-    height: 160px;
-  } */
   .img {
     width: 150px;
   }
