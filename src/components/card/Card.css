@@ -31,3 +31,9 @@
 .card-content {
   text-align: center;
 }
+
+@media (max-width: 900px) {
+  .card {
+    width: 20rem;
+  }
+}

@@ -26,7 +26,7 @@ export default function Projects() {
   return (
     <div>
       <section className="projects" id="Projects">
-        <h2 className="projects-heading">Projects</h2>
+        <h2 className="section-heading">Projects</h2>
         <div className="projects-container container">
           {projects.map((project, index) => (
             <Card key={index} projects={project} />

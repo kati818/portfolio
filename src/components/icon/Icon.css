@@ -8,3 +8,14 @@
   gap: 2.5rem;
   padding: 4rem;
 }
+
+@media (max-width: 900px) {
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .skills-icons {
+    gap: 1rem;
+    padding: 1rem;
+  }
+}

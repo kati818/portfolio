@@ -1,7 +1,6 @@
 .projects {
   background-color: #f2fbfa;
   padding-bottom: 6rem;
-  padding-top: 4rem;
 }
 
 .container {
@@ -16,9 +15,15 @@
   column-gap: 3rem;
 }
 
-.projects-heading {
-  font-size: 80px;
-  text-transform: uppercase;
-  padding-bottom: 60px;
-  text-align: center;
+@media (max-width: 900px) {
+  .projects {
+    background-color: #f2fbfa;
+    padding-bottom: 3rem;
+    padding-top: 4rem;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
 }

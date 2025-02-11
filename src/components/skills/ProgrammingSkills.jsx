@@ -1,5 +1,5 @@
-import "../skills/Skills.css";
-import Skills from "../skills/Skills";
+import "./HardSkills.css";
+import HardSkills from "./HardSkills";
 import javaIcon from "../../assets/img/java-icon.svg";
 import npmIcon from "../../assets/img/npm-icon.svg";
 import nodeJsIcon from "../../assets/img/nodejs-icon.svg";
@@ -14,6 +14,7 @@ import netlify from "../../assets/img/netlify-icon.svg";
 import postmanIcon from "../../assets/img/postman-icon.svg";
 import vsCodeIcon from "../../assets/img/vscode.svg";
 import AnimatedText from "../animatedtext/AnimatedText";
+import { Box } from "@mui/material";
 
 export default function ProgrammingSkills() {
   const backendIcons = [
@@ -39,30 +40,31 @@ export default function ProgrammingSkills() {
   ];
 
   return (
-    <div>
-      <section className="skills" id="Skills">
-        <div className="skills-text-container">
-          <h2 className="skills-heading">Hard skills</h2>
-          <AnimatedText className="programming-skills-text">
-            <p>
-              I have been studying web development for several years, starting
-              my programming journey with a strong emphasis on backend
-              development. Following that, I expanded my expertise to front-end
-              technologies with the goal of becoming a proficient full-stack
-              developer.
-            </p>
-          </AnimatedText>
-        </div>
-        <div>
-          <Skills heading="Backend" icons={backendIcons} className="backend" />
-          <Skills
-            heading="Frontend"
-            icons={frontendIcons}
-            className="frontend"
-          />
-          <Skills heading="Tools" icons={toolIcons} className="tools" />
-        </div>
-      </section>
-    </div>
+    <section className="skills" id="Skills">
+      <div className="skills-text-container">
+        <h2 className="section-heading">Hard skills</h2>
+        <AnimatedText>
+          <Box className="section-text">
+            I have been studying web development for several years, starting my
+            programming journey with a strong emphasis on backend development.
+            Following that, I expanded my expertise to front-end technologies
+            with the goal of becoming a proficient full-stack developer.
+          </Box>
+        </AnimatedText>
+      </div>
+      <div className="hard-skills-container">
+        <HardSkills
+          heading="Backend"
+          icons={backendIcons}
+          className="program-skills-heading"
+        />
+        <HardSkills
+          heading="Frontend"
+          icons={frontendIcons}
+          className="frontend"
+        />
+        <HardSkills heading="Tools" icons={toolIcons} className="tools" />
+      </div>
+    </section>
   );
 }

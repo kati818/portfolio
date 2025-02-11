@@ -8,7 +8,7 @@ export default function Footer() {
       href: "https://www.linkedin.com/in/ekaterina-belikova-895992326/",
       icon: logoLinkedin,
     },
-    { href: "https://www.github.com/", icon: logoGithub },
+    { href: "https://github.com/kati818", icon: logoGithub },
     { href: "https://www.gmail.com/", icon: mailOutline },
   ];
 

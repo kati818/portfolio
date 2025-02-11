@@ -29,12 +29,26 @@
   transform: scale(1.2);
   color: #d88189;
 }
-.year {
-  font-size: 16px;
-  color: #000;
+#year {
+  font-size: 1rem;
+  color: #303030;
 }
 
-#year {
-  font-size: 16px;
-  color: #000;
+@media (max-width: 900px) {
+  .footer {
+    border-top: 4px solid #81d8d0;
+  }
+  .grid-container--footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .footer-icon {
+    color: #81d8d0;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: 0.5s;
+  }
+  #year {
+    font-size: 0.8rem;
+  }
 }

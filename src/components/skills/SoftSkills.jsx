@@ -1,6 +1,6 @@
-import { LanguageSection, SoftSkillSection } from "./Skills";
-import "./SoftSkills.css";
+import { Box, List, ListItem } from "@mui/material";
 import AnimatedText from "../animatedtext/AnimatedText";
+import "./SoftSkills.css";
 
 export default function SoftSkills() {
   const languages = [
@@ -23,26 +23,43 @@ export default function SoftSkills() {
   ];
 
   return (
-    <div>
-      <section className="soft-skills">
-        <div className="softskills-text-container">
-          <h2 className="softskills-heading">Soft Skills</h2>
-          <AnimatedText className="softskills-text">
-            <p>
-              Prior to beginning my studies in programming, I had a strong
-              interest in linguistics, particularly in translation studies. My
-              linguistic background has enhanced my ability to recognize
-              parallels between human languages and programming languages.
-            </p>
-          </AnimatedText>
-        </div>
+    <Box className="soft-skills">
+      <Box className="softskills-text-container">
+        <h2 className="section-heading">Soft Skills</h2>
         <AnimatedText>
-          <div className="lang-soft-skills">
-            <LanguageSection heading="Languages" languages={languages} />
-            <SoftSkillSection heading="Communication skills" skills={skills} />
-          </div>
+          <Box className="section-text">
+            Prior to beginning my studies in programming, I had a strong
+            interest in linguistics, particularly in translation studies. My
+            linguistic background has enhanced my ability to recognize parallels
+            between human languages and programming languages.
+          </Box>
         </AnimatedText>
-      </section>
-    </div>
+        <Box className="soft-skills-container">
+          <Box className="skills-container">
+            <Box className="heading-box">
+              <h2 className="skills-heading">Languages</h2>
+            </Box>
+            <List className="list-items">
+              {languages.map((language, index) => (
+                <ListItem key={index}>
+                  {language.lang} - {language.proficiency}
+                </ListItem>
+              ))}
+            </List>
+          </Box>
+
+          <Box className="skills-container">
+            <Box className="heading-box">
+              <h2 className="skills-heading">Communication skills</h2>
+            </Box>
+            <List className="list-items">
+              {skills.map((skill, index) => (
+                <ListItem key={index}>{skill.skill}</ListItem>
+              ))}
+            </List>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }
