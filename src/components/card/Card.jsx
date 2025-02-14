@@ -5,14 +5,19 @@ export default function Card({ projects }) {
   return (
     <div className="card">
       <div className="card-img">
-        <div className="overlay">
-          <div className="overlay-content"></div>
-        </div>
+        <img src={projects.image} alt={projects.title} />
       </div>
       <div className="card-content">
         <h2>{projects.title}</h2>
         <p>{projects.description}</p>
-        <span>{projects.link}</span>
+        <a
+          href={projects.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="show-more-link"
+        >
+          Show more
+        </a>
       </div>
     </div>
   );
@@ -23,5 +28,6 @@ Card.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
   }).isRequired,
 };

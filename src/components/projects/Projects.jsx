@@ -1,26 +1,31 @@
 import Card from "../card/Card";
 import "./Projects.css";
+import omnifoodImage from "../../assets/img/Omnifood-project.png";
+import weatherAppImage from "../../assets/img/Weather-app.jpg";
+import blogAppImage from "../../assets/img/Blog-app.jpg";
 
 export default function Projects() {
   const projects = [
     {
       title: "Omnifood Project",
       description:
-        "Omnifood is a premium food delivery service that was built using HTML, CSS, and JavaScript. The project alsi incorporates modern web development practices such as responsive web design ang CSS Flexbox/Grid for Layout",
-      link: "link",
-      image: "image",
+        "Omnifood is a premium food delivery service built with HTML, CSS, and JavaScript, utilizing modern web practices like responsive design and CSS Flexbox/Grid for layout.",
+      link: "https://omnifood-katerina818.netlify.app/",
+      image: omnifoodImage,
     },
     {
       title: "Weather App",
-      description: "description",
-      link: "link",
-      image: "image",
+      description:
+        "A user-friendly React app that uses a public API to show real-time weather updates and lets you know if you should bring an umbrella.",
+      link: "https://github.com/kati818/weather-app",
+      image: weatherAppImage,
     },
     {
-      title: "React App",
-      description: "description",
-      link: "link",
-      image: "image",
+      title: "Blog App",
+      description:
+        "A simple and easy-to-use blog app that lets you create posts, built with Node.js, Express.js, and EJS for smooth content management and display.",
+      link: "https://github.com/kati818/blog-app",
+      image: blogAppImage,
     },
   ];
   return (
