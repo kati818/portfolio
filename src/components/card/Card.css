@@ -28,6 +28,8 @@
   padding: 2rem;
   background-color: #fff;
   font-size: 1rem;
+  border: none;
+  height: 15rem;
 }
 
 .card-content h2 {
@@ -50,7 +52,7 @@
 }
 
 .show-more-link {
-  color: ##d88189;
+  color: #d88189;
   text-decoration: none;
 }
 
