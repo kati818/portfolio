@@ -19,3 +19,12 @@
   flex-direction: column;
   gap: 4rem;
 }
+@media (max-width: 700px) {
+  .skills-section {
+    gap: 1rem;
+  }
+
+  .hard-skills-container {
+    gap: 2rem;
+  }
+}

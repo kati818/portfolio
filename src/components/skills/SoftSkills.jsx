@@ -52,7 +52,7 @@ export default function SoftSkills() {
             <Box className="heading-box">
               <h2 className="skills-heading">Communication skills</h2>
             </Box>
-            <List className="list-items">
+            <List className="list-items communication-skills-list">
               {skills.map((skill, index) => (
                 <ListItem key={index}>{skill.skill}</ListItem>
               ))}

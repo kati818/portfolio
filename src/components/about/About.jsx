@@ -39,24 +39,28 @@ export default function About() {
 
   return (
     <section className="about">
-      <h2 className="section-heading">About me</h2>
-      <AnimatedText className="greeting">
-        {/* <LeftQuoteIcon /> */}
-        <TabContext value={value}>
-          <TabPanel
-            className="section-text"
-            value="1"
-            sx={(theme) => ({
-              padding: "0",
-              [theme.breakpoints.down("md")]: {
-                fontSize: "1rem",
-              },
-              [theme.breakpoints.down("sm")]: {
-                fontSize: "0.8rem",
-              },
-            })}
-          >
-            <p className="section-text">
+      <h2 className="about-section-heading">About me</h2>
+
+      {/* <LeftQuoteIcon /> */}
+      <TabContext value={value}>
+        <TabPanel
+          className="section-text"
+          value="1"
+          sx={(theme) => ({
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "0",
+            [theme.breakpoints.down("md")]: {
+              fontSize: "1rem",
+            },
+            [theme.breakpoints.down("sm")]: {
+              fontSize: "0.8rem",
+            },
+          })}
+        >
+          <p className="section-text">
+            <AnimatedText className="greeting">
               Hi, I'm Ekaterina, a passionate and creative web developer with a
               strong interest in front-end development and UI/UX design. My
               programming journey began with backend development, where I
@@ -64,21 +68,26 @@ export default function About() {
               solid foundation in programming principles and deepened my
               understanding of core concepts, making it easier to navigate
               various programming languages.
-            </p>
-          </TabPanel>
-          <TabPanel
-            className="section-text"
-            value="2"
-            sx={(theme) => ({
-              padding: "0",
-              [theme.breakpoints.down("md")]: {
-                fontSize: "1rem",
-              },
-              [theme.breakpoints.down("sm")]: {
-                fontSize: "0.8rem",
-              },
-            })}
-          >
+            </AnimatedText>
+          </p>
+        </TabPanel>
+        <TabPanel
+          className="section-text"
+          value="2"
+          sx={(theme) => ({
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "0",
+            [theme.breakpoints.down("md")]: {
+              fontSize: "1rem",
+            },
+            [theme.breakpoints.down("sm")]: {
+              fontSize: "0.8rem",
+            },
+          })}
+        >
+          <AnimatedText className="greeting">
             <p className="section-text">
               Some years ago, I graduated from the University of Helsinki, where
               I specialized in Translation and Interpreting. My background in
@@ -89,19 +98,24 @@ export default function About() {
               complex technical concepts into accessible, engaging web
               solutions.
             </p>
-          </TabPanel>
-          <TabPanel
-            value="3"
-            sx={(theme) => ({
-              padding: "0",
-              [theme.breakpoints.down("md")]: {
-                fontSize: "1rem",
-              },
-              [theme.breakpoints.down("sm")]: {
-                fontSize: "0.8rem",
-              },
-            })}
-          >
+          </AnimatedText>
+        </TabPanel>
+        <TabPanel
+          value="3"
+          sx={(theme) => ({
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "0",
+            [theme.breakpoints.down("md")]: {
+              fontSize: "1rem",
+            },
+            [theme.breakpoints.down("sm")]: {
+              fontSize: "0.8rem",
+            },
+          })}
+        >
+          <AnimatedText className="greeting">
             <p className="section-text">
               As I transition into front-end development, I'm excited to bring
               fresh ideas and a unique perspective to every project I work on.
@@ -111,55 +125,55 @@ export default function About() {
               skill set to become a full-stack developer, integrating back-end
               technologies with front-end interfaces.
             </p>
-          </TabPanel>
+          </AnimatedText>
+        </TabPanel>
 
-          {/* <RightQuoteIcon /> */}
-          <TabList
-            value={value}
-            onChange={handleChange}
-            sx={(theme) => ({
-              width: "50%",
+        {/* <RightQuoteIcon /> */}
+        <TabList
+          value={value}
+          onChange={handleChange}
+          sx={(theme) => ({
+            width: "50%",
+            borderRadius: "31px",
+            background: "rgb(129, 216, 208)",
+            padding: "8px",
+            boxShadow: "0px 3px 15px rgba(150, 151, 159, 0.5)",
+            "& .MuiTab-root": {
+              color: "#303030",
+            },
+
+            "& .Mui-selected": {
+              color: "#d88189 !important",
+            },
+
+            // Adjust the indicator style
+            [`& .${tabsClasses.indicator}`]: {
+              height: "100%",
               borderRadius: "31px",
-              background: "rgb(129, 216, 208)",
-              padding: "8px",
-              boxShadow: "0px 3px 15px rgba(150, 151, 159, 0.5)",
-              "& .MuiTab-root": {
-                color: "#303030",
-              },
+              backgroundColor: "rgba(255, 255, 255, .2)",
+            },
+            [theme.breakpoints.down("md")]: {
+              width: "50%", // Increase width on medium screens (≤960px)
+              padding: "5px",
+            },
 
-              "& .Mui-selected": {
-                color: "#d88189 !important",
-              },
+            [theme.breakpoints.down("sm")]: {
+              width: "80%", // Make it wider on small screens (≤600px)
+              padding: "3px",
+            },
 
-              // Adjust the indicator style
-              [`& .${tabsClasses.indicator}`]: {
-                height: "100%",
-                borderRadius: "31px",
-                backgroundColor: "rgba(255, 255, 255, .2)",
-              },
-              [theme.breakpoints.down("md")]: {
-                width: "50%", // Increase width on medium screens (≤960px)
-                padding: "5px",
-              },
-
-              [theme.breakpoints.down("sm")]: {
-                width: "80%", // Make it wider on small screens (≤600px)
-                padding: "3px",
-              },
-
-              [theme.breakpoints.down("xs")]: {
-                width: "90%", // Full width on extra small screens (≤400px)
-                padding: "3px",
-              },
-            })}
-            centered
-          >
-            <TabItem label="Journey" value="1" />
-            <TabItem label="Background" value="2" />
-            <TabItem label="Vision" value="3" />
-          </TabList>
-        </TabContext>
-      </AnimatedText>
+            [theme.breakpoints.down("xs")]: {
+              width: "90%", // Full width on extra small screens (≤400px)
+              padding: "3px",
+            },
+          })}
+          centered
+        >
+          <TabItem label="Journey" value="1" />
+          <TabItem label="Background" value="2" />
+          <TabItem label="Vision" value="3" />
+        </TabList>
+      </TabContext>
     </section>
   );
 }

@@ -53,7 +53,11 @@ export default function ProgrammingSkills() {
         </AnimatedText>
       </div>
       <div className="hard-skills-container">
-        <HardSkills heading="Backend" icons={backendIcons} className="prog" />
+        <HardSkills
+          heading="Backend"
+          icons={backendIcons}
+          className="progskills"
+        />
         <HardSkills
           heading="Frontend"
           icons={frontendIcons}

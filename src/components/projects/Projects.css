@@ -15,15 +15,14 @@
   column-gap: 3rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .projects {
     background-color: #f2fbfa;
     padding-bottom: 3rem;
-    padding-top: 4rem;
   }
 
   .projects-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 2rem;
   }
 }
