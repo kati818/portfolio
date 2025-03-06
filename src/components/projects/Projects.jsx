@@ -24,7 +24,7 @@ export default function Projects() {
       title: "Blog App",
       description:
         "A simple and easy-to-use blog app that lets you create posts, built with Node.js, Express.js, and EJS for smooth content management and display.",
-      link: "https://github.com/kati818/blog-app",
+      link: "https://blog-app-1pp2.onrender.com/",
       image: blogAppImage,
     },
   ];
